@@ -1,10 +1,9 @@
-obj-m += pmvs6.o
+obj-m += PMVS_Lab6.o
 KDIR := /lib/modules/$(shell uname -r)/build
 PWD := $(shell pwd)
 
 default:
-	 $(MAKE) -C $(KDIR) SUBDIRS=$(PWD) modules
+	$(MAKE) -C $(KDIR) SUBDIRS=$(PWD) modules
 
 clean:
-	 $(MAKE) -C $(KDIR) SUBDIRS=$(PWD) clean
-
+	$(MAKE) -C $(KDIR) SUBDIRS=$(PWD) clean 
