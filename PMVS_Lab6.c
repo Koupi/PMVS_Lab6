@@ -20,7 +20,7 @@ static ssize_t timecount_show(struct kobject *kobj, struct kobj_attribute *attr,
 
 static void print_hello(unsigned long arg)
 {
-    printk("Hello, world! %d\n", timecount);
+    printk("TIMER TICKS! HELLO, WORLD! %d\n", timecount);
     mod_timer(&timer, jiffies + timeout * HZ);
     timecount--;
     if(timecount == 0) {
